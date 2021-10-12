@@ -1,0 +1,119 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 1rem;
+  width: 95vw;
+  max-width: 1200px;
+}
+
+#title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#description {
+  font-size: 1rem;
+  margin-top: 0.6em;
+}
+
+#treemap-diagram {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 1200px;
+  height: auto;
+}
+
+#svg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 750px;
+  max-height: 600px;
+  background-color: #000;
+  margin: 2rem 0;
+  margin-right: 1.5rem;
+}
+
+svg {
+  display: block;
+}
+
+.tile:hover {
+  cursor: pointer;
+}
+
+#legend-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  max-width: 300px;
+  max-height: 150px;
+  margin: 0;
+}
+
+#tooltip {
+  pointer-events: none;
+  text-align: center;
+  background-color: rgba(255, 255, 204, 0.95);
+  color: #000;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  line-height: 1.1;
+}
+
+@media (min-width: 1000px) {
+  #svg-container {
+    margin: 1.5rem 0;
+  }
+
+  #legend-container {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    width: 100%;
+    padding: 1rem 0 1rem;
+  }
+
+  #treemap-diagram {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #svg-container {
+    margin: 1rem 0;
+  }
+
+  #legend-container {
+    width: 95%;
+    max-width: 300px;
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  #tooltip {
+    font-size: 2.3vw;
+    padding: 6px;
+  }
+}
